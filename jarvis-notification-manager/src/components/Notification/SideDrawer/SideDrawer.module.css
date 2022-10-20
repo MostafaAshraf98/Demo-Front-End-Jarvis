@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.sideDrawer {
+    width: 400px;
+    max-width: 70%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 45px;
+    z-index: 200;
+    background-color: white;
+    padding: 32px 16px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-out;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+
+}
+
+.Open {
+    transform: translateX(400px);
+}
+
+.Close {
+    transform: translateX(100%);
+}
+
+.header {
+    font-family: 'Lato', sans-serif;
+    position: absolute;
+    color: #2F256A;
+    text-align: left;
+    font-size: 1.3rem;
+    size: 16px;
+
+}
+
+.mark {
+    font-family: 'Lato', sans-serif;
+    margin-top: 10px;
+    color: #22499D;
+    right: 0;
+    margin-right: 50px;
+    position: absolute;
+    text-align: left;
+    font-size: 0.7rem;
+    size: 16px;
+}

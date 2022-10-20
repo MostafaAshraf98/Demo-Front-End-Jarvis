@@ -1,0 +1,30 @@
+.notificationDrawerToggler {
+    margin-right: 46px;
+    padding-top: 6px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.notificationDrawerToggler img:hover {
+    background-color: #e6ecf2;
+}
+
+.badge {
+    background-color: #B70E0D;
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    z-index: 1;
+    margin-right: 30px;
+    display: inline-block;
+    font-size: smaller;
+    text-align: center;
+    color: white;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin: 0.5rem auto;
+}

@@ -1,0 +1,142 @@
+.universal-search{
+    width: 45%;
+    margin-left: 1rem;
+    position: relative;
+    font-family: "DIN Pro";
+    padding-left: 22px;
+}
+
+.ant-input {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-variant: tabular-nums;
+    list-style: none;
+    font-feature-settings: 'tnum', "tnum";
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 32px;
+    padding: 4px 11px;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.ant-input-lg{
+    height: 40px;
+    padding: 6px 11px;
+    font-size: 16px;
+}
+
+.ant-input-affix-wrapper .ant-input-prefix, .ant-input-affix-wrapper .ant-input-suffix {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 0;
+    transform: translateY(-50%);
+}
+
+.ant-input-affix-wrapper .ant-input-suffix {
+    right: 12px;
+}
+
+.universal-search .search-bar input {
+    height: 100%;
+    background-color: #e6ecf2;
+    border-radius: 2px;
+    padding-left: 1.1em;
+    border: 1px solid #e8e8e8;
+    color: #333333;
+    z-index: 2;
+}
+
+.ant-input-affix-wrapper{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5;
+    list-style: none;
+    font-feature-settings: 'tnum', "tnum";
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: start;
+}
+
+.ant-input-affix-wrapper .ant-input:not(:last-child) {
+    padding-right: 30px;
+}
+
+.ant-input-affix-wrapper .ant-input {
+    min-height: 100%;
+    position: relative;
+    text-align: inherit;
+}
+
+.ant-input-affix-wrapper .ant-input:not(:last-child) {
+    padding-right: 30px;
+}
+.universal-search .search-bar input {
+    height: 100%;
+    background-color: #e6ecf2;
+    border-radius: 2px;
+    padding-left: 1.1em;
+    border: 1px solid #e8e8e8;
+    color: #333333;
+    z-index: 2;
+}
+.ant-input-affix-wrapper .ant-input {
+    min-height: 100%;
+    position: relative;
+    text-align: inherit;
+}
+.ant-input:placeholder-shown {
+    text-overflow: ellipsis;
+}
+
+.anticon[tabindex] {
+    cursor: pointer;
+}
+.ant-input-search-icon {
+    color: rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.ant-input-affix-wrapper .ant-input-prefix :not(.anticon), .ant-input-affix-wrapper .ant-input-suffix :not(.anticon) {
+    line-height: 1.5;
+}
+
+.ant-input-affix-wrapper .ant-input-prefix :not(.anticon), .ant-input-affix-wrapper .ant-input-suffix :not(.anticon) {
+    line-height: 1.5;
+}
+.anticon svg {
+    display: inline-block;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.anticon {
+    display: inline-block;
+    color: inherit;
+    font-style: normal;
+    line-height: 0;
+    text-align: center;
+    text-transform: none;
+    vertical-align: -0.125em;
+    text-rendering: optimizeLegibility;
+}
+

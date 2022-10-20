@@ -1,9 +1,16 @@
-import './App.css';
+import classes from './App.module.css';
+import SideNav from './components/Layout/SideNav/SideNav';
+import GlobalHeader from './components/Layout/GlobalHeader/GlobalHeader';
+import HomePage from './pages/Home/HomePage';
+import SideDrawer from './components/Notification/SideDrawer/SideDrawer';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-        Hello App
+    <div >
+      <SideNav />
+      <GlobalHeader />
+      <HomePage />
+      <SideDrawer />
     </div>
   );
 }

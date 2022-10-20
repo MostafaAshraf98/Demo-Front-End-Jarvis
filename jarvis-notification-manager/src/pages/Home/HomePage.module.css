@@ -1,0 +1,17 @@
+.homePage {
+    padding-left: 150px;
+    padding-top: 45px;
+
+}
+
+.header {
+    position: fixed;
+    z-index: 2;
+    background-color: #eaeaea;
+    width: calc(100vw - 150px);
+    height: 60px;
+    padding: 0 5px 0 0;
+    color: #666666;
+    display: block;
+    padding-left: 20px;
+}
