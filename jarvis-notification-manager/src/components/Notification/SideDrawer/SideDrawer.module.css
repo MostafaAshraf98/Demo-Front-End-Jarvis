@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
 .sideDrawer {
-    width: 400px;
+    width: 450px;
     max-width: 70%;
     height: 100%;
     position: fixed;
@@ -9,13 +7,41 @@
     top: 45px;
     z-index: 200;
     background-color: white;
-    padding: 32px 16px;
     box-sizing: border-box;
     transition: transform 0.3s ease-out;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 
-    display: flex;
+}
 
+.setting {
+    position: absolute;
+    right: 0;
+    margin-right: 14px;
+    margin-top: 21px;
+    height: 22px;
+    width: 22px;
+}
+
+.alert {
+    margin-top: 297px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #2F256A;
+    font-size: 1.3rem;
+}
+
+.alert img {
+    width: 150px;
+    height: 160px;
+    padding-bottom: 10px;
+}
+
+
+
+.setting:hover {
+    cursor: pointer;
 }
 
 .Open {
@@ -27,18 +53,17 @@
 }
 
 .header {
-    font-family: 'Lato', sans-serif;
     position: absolute;
     color: #2F256A;
     text-align: left;
     font-size: 1.3rem;
+    margin-top: 16px;
+    margin-left: 32px;
     size: 16px;
-
 }
 
 .mark {
-    font-family: 'Lato', sans-serif;
-    margin-top: 10px;
+    margin-top: 26px;
     color: #22499D;
     right: 0;
     margin-right: 50px;
@@ -46,4 +71,10 @@
     text-align: left;
     font-size: 0.7rem;
     size: 16px;
+}
+
+/* when hovering over mark underline it */
+.mark:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }

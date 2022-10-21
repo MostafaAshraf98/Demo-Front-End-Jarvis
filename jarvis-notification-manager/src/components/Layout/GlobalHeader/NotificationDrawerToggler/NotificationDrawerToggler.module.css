@@ -8,8 +8,9 @@
     position: relative;
 }
 
-.notificationDrawerToggler img:hover {
+.notificationDrawerToggler div:hover {
     background-color: #e6ecf2;
+    cursor: pointer;
 }
 
 .badge {

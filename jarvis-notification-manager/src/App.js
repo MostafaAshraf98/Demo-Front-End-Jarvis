@@ -6,7 +6,7 @@ import SideDrawer from './components/Notification/SideDrawer/SideDrawer';
 
 const App = () => {
   return (
-    <div >
+    <div className={classes.main}>
       <SideNav />
       <GlobalHeader />
       <HomePage />

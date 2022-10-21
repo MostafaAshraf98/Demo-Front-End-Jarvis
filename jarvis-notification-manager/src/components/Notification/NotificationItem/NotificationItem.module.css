@@ -1,0 +1,133 @@
+.notificationItem {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: 1px solid #e6ecf2;
+}
+
+.unread {
+    background-color: #DD7500;
+    position: absolute;
+    margin-top: 27px;
+    margin-left: 16px;
+    z-index: 1;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.initials {
+    background-color: #2F256A;
+    margin-left: 38px;
+    margin-top: 16px;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* center the span */
+.initials span {
+    font-size: 1.3rem;
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 26px;
+    margin-top: 16px;
+}
+
+.title {
+    color: #4A4A4A;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: -0.37px;
+    line-height: 21px;
+    padding-bottom: 8px;
+    max-width: 310px;
+}
+
+.body {
+    color: #4A4A4A;
+    font-size: 13px;
+    letter-spacing: -0.35px;
+    line-height: 20px;
+    padding-bottom: 8px;
+    max-width: 310px;
+}
+
+.date {
+    color: #706F70;
+    font-family: Lato;
+    font-size: 12px;
+    letter-spacing: -0.27px;
+    line-height: 15px;
+    padding-bottom: 8px;
+    max-width: 310px;
+}
+
+.attachment {
+    width: 130px;
+}
+
+.inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.download {
+    color: #22499D;
+    font-family: Lato;
+    font-size: 10px;
+    letter-spacing: -0.27px;
+    line-height: 15px;
+}
+
+
+.attachment img {
+    height: 27px;
+    width: 30px;
+}
+
+.attachment :hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.menu {
+    position: relative;
+    display: flex;
+    margin-right: 12px;
+    margin-top: 16px;
+}
+
+.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+.circle:hover {
+
+    cursor: pointer;
+    background-color: #DD7500;
+}
+
+.dot {
+
+    height: 30px;
+    width: 30px;
+    transform: rotate(90deg);
+    margin-top: 5px;
+}
