@@ -3,15 +3,21 @@ import ReactTooltip from "react-tooltip";
 import { useEffect } from 'react';
 import NotificationList from '../NotificationList/NotificationList';
 
-const SideDrawer = () => {
+const SideDrawer = ({drawerOpen }) => {
     useEffect(() => {
         ReactTooltip.rebuild();
     }, []);
     const offset = { 'top': 35, 'right': 25 }
 
+    let attachedClasses = [classes.sideDrawer,classes.Close];
+    if(drawerOpen)
+    {
+        attachedClasses = [classes.sideDrawer,classes.Open];
+    }
+
     return (
-        <div className={classes.sideDrawer}>
-            <div className={classes.drawerHeader}>
+        <div className={attachedClasses.join(' ')} >
+            <div  className={classes.drawerHeader}>
                 <span className={classes.header}> Notifications </span>
                 <span className={classes.mark}> Mark all as read</span>
             </div>

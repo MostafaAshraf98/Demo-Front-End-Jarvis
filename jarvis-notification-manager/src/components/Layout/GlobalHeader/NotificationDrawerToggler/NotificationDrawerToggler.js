@@ -1,8 +1,8 @@
 import classes from './NotificationDrawerToggler.module.css';
 
-const NotificationDrawerToggler = () => {
+const NotificationDrawerToggler = ({drawerToggleClickHandler }) => {
     return (
-        <div className={classes.notificationDrawerToggler}>
+        <div className={classes.notificationDrawerToggler} onClick={drawerToggleClickHandler }>
             <div>
                 <img src="/assets/Notification.svg" alt="bell" />
                 <span className={classes.badge}>
