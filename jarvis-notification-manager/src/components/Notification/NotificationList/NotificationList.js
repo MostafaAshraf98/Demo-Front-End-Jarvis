@@ -1,8 +1,11 @@
 import classes from './NotificationList.module.css';
 import NotificationItem from '../NotificationItem/NotificationItem';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import SignalRContext from '../../../store/signalR-context';
+import { useContext } from 'react';
 
 const NotificationList = () => {
+    const signalRCtx = useContext(SignalRContext);
     const dummy_list = [
         {
             id: 1,
@@ -102,26 +105,26 @@ const NotificationList = () => {
 
     ];
 
-    const content = dummy_list.map((item) => {
+    const content = signalRCtx.notifications.map((item) => {
         return <NotificationItem key={item.id} message={item} />
-    });
+    })
 
-    return (
-        <div className={classes.notificationList}>
-            <ul >
-                <InfiniteScroll
-                    dataLength={dummy_list.length}
-                    pullDownToRefreshThreshold={50}
-                    scrollableTarget="scrollableDiv"
-                    hasMore={false}
-                    loader={<h4>Loading...</h4>}
-                >
-                    {content}
-                </InfiniteScroll>
+return (
+    <div className={classes.notificationList}>
+        <ul >
+            <InfiniteScroll
+                dataLength={content.length}
+                pullDownToRefreshThreshold={50}
+                scrollableTarget="scrollableDiv"
+                hasMore={false}
+                loader={<h4>Loading...</h4>}
+            >
+                {content}
+            </InfiniteScroll>
 
-            </ul>
-        </div>
-    );
+        </ul>
+    </div>
+);
 
 };
 

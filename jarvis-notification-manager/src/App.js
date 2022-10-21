@@ -1,5 +1,4 @@
 import classes from './App.module.css';
-import SideNav from './components/Layout/SideNav/SideNav';
 import GlobalHeader from './components/Layout/GlobalHeader/GlobalHeader';
 import HomePage from './pages/Home/HomePage';
 import SubscriptionsPage from './pages/Subscriptions/SubscriptionsPage';
@@ -19,13 +18,25 @@ const App = () => {
   if (signalRCtx.isConnected) {
     routes.push(<Route key={2} path="/Subscriptions" component={SubscriptionsPage} exact />);
   }
+  const markAllAsReadHandler = () => {
+    console.log("markAllAsReadHandler");
+    signalRCtx.markAllAsRead();
+    // change the status of all from notifications array
+    signalRCtx.setNotifications(signalRCtx.notifications.map((not) => {
+        not.status = "Read";
+        return not;
+    }
+    ));
+    signalRCtx.setCountDelivered(0);
+}
   const drawerToggleClickHandler = () => {
-    console.log('drawerToggleClickHandler');
-    console.log("Prev State: " + drawerOpen);
-    // Toggle the state of drawerOpen
-    setDrawerOpen(!drawerOpen);
-    console.log("New State: " + !drawerOpen);
+    console.log("drawerToggleClickHandler");
+    if(drawerOpen) {
+        markAllAsReadHandler();
+    }
+    setDrawerOpen(prevState => !prevState);
   };
+
   return (
     <div className={classes.main}>
       <GlobalHeader drawerToggleClickHandler={drawerToggleClickHandler} />
@@ -33,7 +44,7 @@ const App = () => {
         {routes}
       </Switch>
 
-      <SideDrawer drawerOpen={drawerOpen} />
+      <SideDrawer drawerOpen={drawerOpen} markAllAsReadHandler={ markAllAsReadHandler} />
 
     </div>
   );

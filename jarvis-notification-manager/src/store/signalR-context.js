@@ -61,6 +61,7 @@ export function SignalRProvider({ children }) {
                     connect();
                 }, 1000);
             });
+            getUserNotifications();
         }
     }, [connection])
 
@@ -179,7 +180,6 @@ export function SignalRProvider({ children }) {
     }
 
     const subscribeToGroup = async (groupName) => {
-        console.log(connection);
         await connection.invoke("SubscribeToType", groupName);
     }
 
