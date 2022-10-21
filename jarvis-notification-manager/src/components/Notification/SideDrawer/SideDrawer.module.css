@@ -1,7 +1,7 @@
 .sideDrawer {
     width: 450px;
     max-width: 70%;
-    max-height: 100%;
+    max-height: 95%;
     position: fixed;
     right: 0;
     top: 45px;
@@ -13,14 +13,56 @@
     overflow-y: scroll;
 }
 
-.setting {
+.drawerHeader {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    z-index: 150;
+    background-color: white;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.header {
     position: absolute;
-    right: 0;
-    margin-right: 14px;
-    margin-top: 21px;
+    color: #2F256A;
+    text-align: left;
+    font-size: 1.3rem;
+    margin-left: 32px;
+    size: 16px;
+}
+
+.mark {
+    position: absolute;
+    color: #22499D;
+    margin-top: 8px;
+    margin-left: 310px;
+    font-size: 0.7rem;
+    size: 16px;
+}
+
+/* when hovering over mark underline it */
+.mark:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.setting {
+    z-index: 200;
+    position: fixed;
+    margin-left: 400px;
+    margin-top: 18px;
     height: 22px;
     width: 22px;
 }
+
+.setting:hover {
+    cursor: pointer;
+}
+
 
 .alert {
     margin-top: 297px;
@@ -38,43 +80,10 @@
     padding-bottom: 10px;
 }
 
-
-
-.setting:hover {
-    cursor: pointer;
-}
-
 .Open {
     transform: translateX(400px);
 }
 
 .Close {
     transform: translateX(100%);
-}
-
-.header {
-    position: absolute;
-    color: #2F256A;
-    text-align: left;
-    font-size: 1.3rem;
-    margin-top: 16px;
-    margin-left: 32px;
-    size: 16px;
-}
-
-.mark {
-    margin-top: 26px;
-    color: #22499D;
-    right: 0;
-    margin-right: 50px;
-    position: absolute;
-    text-align: left;
-    font-size: 0.7rem;
-    size: 16px;
-}
-
-/* when hovering over mark underline it */
-.mark:hover {
-    text-decoration: underline;
-    cursor: pointer;
 }

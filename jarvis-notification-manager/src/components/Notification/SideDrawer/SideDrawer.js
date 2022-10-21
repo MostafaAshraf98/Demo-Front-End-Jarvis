@@ -11,9 +11,10 @@ const SideDrawer = () => {
 
     return (
         <div className={classes.sideDrawer}>
-            <span className={classes.header}> Notifications </span>
-            <span className={classes.mark}> Mark all as read</span>
-
+            <div className={classes.drawerHeader}>
+                <span className={classes.header}> Notifications </span>
+                <span className={classes.mark}> Mark all as read</span>
+            </div>
             <div>
                 <img src="/assets/setting.svg" className={classes.setting} alt="setting" data-tip='' data-for="Notification" />
 
