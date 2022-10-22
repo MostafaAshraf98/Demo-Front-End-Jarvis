@@ -1,4 +1,5 @@
 import classes from './SideDrawer.module.css';
+import { Link } from 'react-router-dom';
 import ReactTooltip from "react-tooltip";
 import { useEffect } from 'react';
 import NotificationList from '../NotificationList/NotificationList';
@@ -36,14 +37,14 @@ const SideDrawer = ({ drawerOpen, markAllAsReadHandler }) => {
                 <span className={classes.header}> Notifications </span>
                 <span className={classes.mark} onClick={markAllAsReadHandler}> Mark all as read</span>
             </div>
-            <div className={classes.setting}>
+            <Link  to="/Subscriptions" className={classes.setting}>
                 <img src="/assets/setting.svg" alt="setting" data-tip='' data-for="Notification" />
                 <div>
                     <ReactTooltip id="Notification" offset={offset} place='top' effect="solid">
                         Notification Management System
                     </ReactTooltip>
                 </div>
-            </div>
+            </Link>
             {content}
         </div>
     );
