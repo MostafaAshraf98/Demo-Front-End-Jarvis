@@ -26,10 +26,10 @@
     padding-left: 22px;
     margin-top: 24px;
     height: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
-.separator{
+.separator {
     opacity: 0.3;
     border: 1px dotted #fff;
     margin: 12px 15px;

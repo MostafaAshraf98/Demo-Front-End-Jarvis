@@ -23,16 +23,16 @@ const App = () => {
     signalRCtx.markAllAsRead();
     // change the status of all from notifications array
     signalRCtx.setNotifications(signalRCtx.notifications.map((not) => {
-        not.status = "Read";
-        return not;
+      not.status = "Read";
+      return not;
     }
     ));
     signalRCtx.setCountDelivered(0);
-}
+  }
   const drawerToggleClickHandler = () => {
     console.log("drawerToggleClickHandler");
-    if(drawerOpen) {
-        markAllAsReadHandler();
+    if (drawerOpen) {
+      markAllAsReadHandler();
     }
     setDrawerOpen(prevState => !prevState);
   };
@@ -44,7 +44,7 @@ const App = () => {
         {routes}
       </Switch>
 
-      <SideDrawer drawerOpen={drawerOpen} markAllAsReadHandler={ markAllAsReadHandler} />
+      <SideDrawer drawerOpen={drawerOpen} markAllAsReadHandler={markAllAsReadHandler} drawerToggleClickHandler={drawerToggleClickHandler} />
 
     </div>
   );

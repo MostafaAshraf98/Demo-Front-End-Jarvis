@@ -1,6 +1,6 @@
 import classes from './SubscriptionsPage.module.css';
 import Switch from '../../components/UI/Switcher/Switch';
-import { useState, useContext,useEffect } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import SignalRContext from '../../store/signalR-context';
 import { FadeLoader } from "react-spinners";
 import SubscriptionList from '../../components/Subscription/SubscriptionList/SubscriptionList';
@@ -13,9 +13,11 @@ const SubscriptionsPage = () => {
     const [loading, setLoading] = useState(true);
     const signalRCtx = useContext(SignalRContext);
 
+
     useEffect(() => {
         console.log("Fetching subscriptions")
         setLoading(true);
+        let subscribedToAll = true;
         //http://sademo.azurewebsites.net
         //https://localhost:8087
         fetch("https://localhost:8087/api/Subscription", {
@@ -35,9 +37,13 @@ const SubscriptionsPage = () => {
                     receiveInAppNotification: element.receiveInAppNotification,
                     description: element.description
                 });
+                if (!element.receiveEmail || !element.receiveInAppNotification) {
+                    subscribedToAll = false;
+                }
             });
             setLoading(false);
             setSubscriptions(subscriptions);
+            setSubscribeAllIsOn(subscribedToAll);
         })
     }, []);
 
@@ -46,12 +52,12 @@ const SubscriptionsPage = () => {
         let subscribedToAll = true;
         const Newsubscriptions = subscriptions.map(subscription => {
             if (subscription.groupName === groupName) {
-                if(type==="Email")
+                if (type === "Email")
                     subscription.receiveEmail = !subscription.receiveEmail;
                 else
                     subscription.receiveInAppNotification = !subscription.receiveInAppNotification;
             }
-            if (subscribedToAll==false || subscription.receiveEmail == false || subscription.receiveInAppNotification == false)
+            if (subscribedToAll == false || subscription.receiveEmail == false || subscription.receiveInAppNotification == false)
                 subscribedToAll = false;
             return subscription;
         })
@@ -86,7 +92,7 @@ const SubscriptionsPage = () => {
             })
             return updatedSubscriptions;
         });
-        setSubscribeAllIsOn(prevState=>!prevState);
+        setSubscribeAllIsOn(prevState => !prevState);
     }
     if (loading) {
         return (

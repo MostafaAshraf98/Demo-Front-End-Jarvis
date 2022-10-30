@@ -6,7 +6,7 @@ import NotificationList from '../NotificationList/NotificationList';
 import { useContext } from 'react';
 import SignalRContext from '../../../store/signalR-context';
 
-const SideDrawer = ({ drawerOpen, markAllAsReadHandler }) => {
+const SideDrawer = ({ drawerOpen, markAllAsReadHandler, drawerToggleClickHandler }) => {
     useEffect(() => {
         ReactTooltip.rebuild();
     }, []);
@@ -36,15 +36,15 @@ const SideDrawer = ({ drawerOpen, markAllAsReadHandler }) => {
             <div className={classes.drawerHeader}>
                 <span className={classes.header}> Notifications </span>
                 <span className={classes.mark} onClick={markAllAsReadHandler}> Mark all as read</span>
+                <Link to="/Subscriptions" className={classes.setting} onClick={drawerToggleClickHandler}>
+                    <img src="/assets/setting.svg" alt="setting" data-tip='' data-for="Notification" />
+                    <div className={classes.tooltip}>
+                        <ReactTooltip id="Notification" place='top' effect="solid">
+                            Notification Management System
+                        </ReactTooltip>
+                    </div>
+                </Link>
             </div>
-            <Link  to="/Subscriptions" className={classes.setting}>
-                <img src="/assets/setting.svg" alt="setting" data-tip='' data-for="Notification" />
-                <div>
-                    <ReactTooltip id="Notification" offset={offset} place='top' effect="solid">
-                        Notification Management System
-                    </ReactTooltip>
-                </div>
-            </Link>
             {content}
         </div>
     );

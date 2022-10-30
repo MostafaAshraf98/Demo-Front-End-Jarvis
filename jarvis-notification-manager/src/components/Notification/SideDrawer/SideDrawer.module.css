@@ -1,8 +1,8 @@
 .sideDrawer {
     width: 550px;
     max-width: 70%;
-    max-height: 95%;
-    min-height: 95%;
+    max-height: 92%;
+    min-height: 92%;
     position: fixed;
     right: 0;
     top: 45px;
@@ -16,31 +16,29 @@
 
 .drawerHeader {
     width: 100%;
+    position: sticky;
     height: 50px;
-    position: fixed;
-    z-index: 800;
+    top: 0;
+    z-index: 900;
     background-color: white;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
+    border-bottom: #e6ecf2 solid 1px;
 }
 
 .header {
     position: absolute;
+    top: 15px;
+    left: 32px;
     color: #2F256A;
     text-align: left;
     font-size: 1.3rem;
-    margin-left: 32px;
     size: 16px;
 }
 
 .mark {
     position: absolute;
     color: #22499D;
-    margin-top: 8px;
-    margin-left: 410px;
+    top: 20px;
+    right: 55px;
     font-size: 0.7rem;
     size: 16px;
 }
@@ -51,11 +49,11 @@
     cursor: pointer;
 }
 
-.setting img{
+.setting img {
     z-index: 900;
-    position: fixed;
-    margin-left: 500px;
-    margin-top: 18px;
+    position: absolute;
+    right: 15px;
+    top: 18px;
     height: 22px;
     width: 22px;
 }
@@ -66,7 +64,8 @@
 
 
 .alert {
-    margin-top: 297px;
+    position: relative;
+    top: 180px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,6 +78,10 @@
     width: 150px;
     height: 160px;
     padding-bottom: 10px;
+}
+
+.tooltip {
+    z-index: 999;
 }
 
 .Open {

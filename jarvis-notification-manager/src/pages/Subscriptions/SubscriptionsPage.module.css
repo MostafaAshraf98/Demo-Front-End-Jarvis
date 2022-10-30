@@ -5,12 +5,12 @@
     align-items: center;
     margin-top: 45px;
     background-color: #eaeaea;
-    width: 100vw;
+    width: 100%;
     height: 50px;
     z-index: 200;
 }
 
-.header{
+.header {
     position: absolute;
     margin-left: 40px;
     width: 92%;
@@ -20,13 +20,13 @@
     letter-spacing: .3em;
 }
 
-.title{
+.title {
     display: flex;
     position: relative;
     top: 110px;
 }
 
-.notification{
+.notification {
     position: absolute;
     top: 10px;
     left: 150px;
@@ -39,7 +39,7 @@
 /* text to the right of the screen */
 
 
-.subscribe{
+.subscribe {
     position: absolute;
     top: 20px;
     right: 100px;
@@ -47,12 +47,12 @@
     font-family: Gill Sans MT;
 }
 
-.switch{
+.switch {
     position: absolute;
     right: 40px;
 }
 
-.email{
+.email {
     position: absolute;
     top: 60px;
     right: 148px;
@@ -62,7 +62,7 @@
     color: #111163;
 }
 
-.inApp{
+.inApp {
     position: absolute;
     top: 60px;
     right: 40px;
@@ -71,4 +71,3 @@
     font-weight: 500;
     color: #111163;
 }
-

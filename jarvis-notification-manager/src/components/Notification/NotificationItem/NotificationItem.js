@@ -54,7 +54,7 @@ const NotificationItem = ({ message }) => {
                 <span className={classes.body}>{message.body}</span>
                 <span className={classes.date}>Date: {Moment(message.sendingTime).format('DD/MM/YYYY HH:MM')} ET by Jarvis</span>
                 {message.fileName ?
-                    <div className={classes.attachment} onClick={downloadFileHandler }>
+                    <div className={classes.attachment} onClick={downloadFileHandler}>
                         <div className={classes.inner}>
                             <img src="/assets/Download.svg" alt="attachment" />
                             <span className={classes.download}>Download document</span>
@@ -67,7 +67,7 @@ const NotificationItem = ({ message }) => {
                 <div className={classes.circle}>
                     <img className={classes.dot} src="/assets/BurgerMenu.svg" alt="menu" />
                 </div>
-                <Options id={message.id} type={message.notificationType } show={optionsOpen} />
+                <Options status={message.status} id={message.id} type={message.notificationType} show={optionsOpen} />
             </div>
 
         </li>
