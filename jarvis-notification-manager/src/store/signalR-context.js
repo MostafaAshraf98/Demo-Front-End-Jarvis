@@ -81,6 +81,7 @@ export function SignalRProvider({ children }) {
                 return response.json();
             }).then(data => {
                 const notifications = [];
+                let countDelivered = 0;
                 data.forEach(element => {
                     notifications.push({
                         id: element.id,
@@ -93,7 +94,11 @@ export function SignalRProvider({ children }) {
                         fileName: element.fileName,
                         notificationType: element.notificationType
                     });
+                    if (element.status == "Unread")
+                        countDelivered++;
                 });
+                console.log("Count delivered:", countDelivered)
+                setCountDelivered(countDelivered);
                 setNotifications(notifications);
             });
     }
